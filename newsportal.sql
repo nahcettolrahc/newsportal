@@ -1,11 +1,4 @@
--- phpMyAdmin SQL Dump
--- version 5.2.0
--- https://www.phpmyadmin.net/
---
--- Host: 127.0.0.1
--- Generation Time: Nov 10, 2022 at 05:27 PM
--- Server version: 10.4.25-MariaDB
--- PHP Version: 8.1.10
+
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -26,7 +19,8 @@ SET time_zone = "+00:00";
 --
 -- Table structure for table `tbladmin`
 --
-
+create database newsportal;
+use newsportal;
 CREATE TABLE `tbladmin` (
   `id` int(11) NOT NULL,
   `AdminUserName` varchar(255) DEFAULT NULL,
