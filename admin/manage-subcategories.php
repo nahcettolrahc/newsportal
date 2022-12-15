@@ -11,14 +11,14 @@ if($_GET['action']=='del' && $_GET['scid'])
 {
 	$id=intval($_GET['scid']);
 	$query=mysqli_query($con,"update  tblsubcategory set Is_Active='0' where SubCategoryId='$id'");
-	$msg="Category deleted ";
+	$msg="Xóa Thể Loại";
 }
 // Code for restore
 if($_GET['resid'])
 {
 	$id=intval($_GET['resid']);
 	$query=mysqli_query($con,"update  tblsubcategory set Is_Active='1' where SubCategoryId='$id'");
-	$msg="Category restored successfully";
+	$msg="Phục Hồi Thể Loại Con Đã Bị Xóa";
 }
 
 // Code for Forever deletionparmdel
@@ -26,7 +26,7 @@ if($_GET['action']=='perdel' && $_GET['scid'])
 {
 	$id=intval($_GET['scid']);
 	$query=mysqli_query($con,"delete from   tblsubcategory  where SubCategoryId='$id'");
-	$delmsg="Category deleted forever";
+	$delmsg="Xóa Thể Loại Con Vĩnh Viễn";
 }
 
 ?>

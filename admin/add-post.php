@@ -39,10 +39,10 @@ $status=1;
 $query=mysqli_query($con,"insert into tblposts(PostTitle,CategoryId,SubCategoryId,PostDetails,PostUrl,Is_Active,PostImage,postedBy) values('$posttitle','$catid','$subcatid','$postdetails','$url','$status','$imgnewfile','$postedby')");
 if($query)
 {
-$msg="Post successfully added ";
+$msg="Thêm Bài";
 }
 else{
-$error="Something went wrong . Please try again.";    
+$error="Đã có lỗi vui lòng thử lại";    
 } 
 
 }

@@ -14,10 +14,10 @@ $email=$_POST['emailid'];
 $query=mysqli_query($con,"Update  tbladmin set AdminEmailId='$email'  where userType=0 && id='$aid'");
 if($query)
 {
-echo "<script>alert('Sub-admin details updated.');</script>";
+echo "<script>alert('Cập nhật cộng tác viên');</script>";
 }
 else{
-echo "<script>alert('Something went wrong . Please try again.');</script>";
+echo "<script>alert('Đã có lỗi vui lòng thử lại');</script>";
 } 
 }
 

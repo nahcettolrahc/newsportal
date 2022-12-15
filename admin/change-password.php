@@ -29,12 +29,12 @@ if($num>0)
 if (password_verify($password, $dbpassword)) {
 
  $con=mysqli_query($con,"update tbladmin set AdminPassword='$newhashedpass', updationDate='$currentTime' where AdminUserName='$adminid'");
-$msg="Password Changed Successfully !!";
+$msg="Đổi mật khẩu";
 }
 }
 else
 {
-$error="Old Password not match !!";
+$error="Mật khẩu không khớp";
 }
 }
 

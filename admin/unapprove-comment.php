@@ -11,14 +11,14 @@ if( $_GET['disid'])
 {
 	$id=intval($_GET['disid']);
 	$query=mysqli_query($con,"update tblcomments set status='0' where id='$id'");
-	$msg="Comment unapprove ";
+	$msg="Không chấp thuận bình luận ";
 }
 // Code for restore
 if($_GET['appid'])
 {
 	$id=intval($_GET['appid']);
 	$query=mysqli_query($con,"update tblcomments set status='1' where id='$id'");
-	$msg="Comment approved";
+	$msg="Chấp thuận bình luận";
 }
 
 // Code for deletion
@@ -26,7 +26,7 @@ if($_GET['action']=='del' && $_GET['rid'])
 {
 	$id=intval($_GET['rid']);
 	$query=mysqli_query($con,"delete from  tblcomments  where id='$id'");
-	$delmsg="Comment deleted forever";
+	$delmsg="Đã xóa vĩnh viễn";
 }
 
 ?>
@@ -150,9 +150,9 @@ while($row=mysqli_fetch_array($query))
 <td><?php echo htmlentities($row['comment']);?></td>
 <td><?php $st=$row['status'];
 if($st=='0'):
-echo "Wating for approval";
+echo "Chưa Duyệt";
 else:
-echo "Approved";
+echo "Duyệt";
 endif;
 ?></td>
 
@@ -161,9 +161,9 @@ endif;
 <td><?php echo htmlentities($row['postingDate']);?></td>
 <td>
 <?php if($st=='0'):?>
-    <a href="unapprove-comment.php?disid=<?php echo htmlentities($row['id']);?>" title="Disapprove this comment"><i class="ion-arrow-return-right" style="color: #29b6f6;"></i></a> 
+    <a href="unapprove-comment.php?disid=<?php echo htmlentities($row['id']);?>" title="Không Duyệt Bình Luận Này"><i class="ion-arrow-return-right" style="color: #29b6f6;"></i></a> 
 <?php else :?>
-  <a href="unapprove-comment.php?appid=<?php echo htmlentities($row['id']);?>" title="Approve this comment"><i class="ion-arrow-return-right" style="color: #29b6f6;"></i></a> 
+  <a href="unapprove-comment.php?appid=<?php echo htmlentities($row['id']);?>" title="Duyệt Bình Luận Này"><i class="ion-arrow-return-right" style="color: #29b6f6;"></i></a> 
 <?php endif;?>
 
 	&nbsp;<a href="unapprove-comment.php?rid=<?php echo htmlentities($row['id']);?>&&action=del"> <i class="fa fa-trash-o" style="color: #f05050"></i></a> </td>

@@ -14,10 +14,10 @@ $postid=intval($_GET['pid']);
 $query=mysqli_query($con,"update tblposts set Is_Active=0 where id='$postid'");
 if($query)
 {
-$msg="Post deleted ";
+$msg="Xóa bài đăng ";
 }
 else{
-$error="Something went wrong . Please try again.";    
+$error="Đã có lỗi vui lòng thử lại";    
 } 
 }
 ?>

@@ -13,7 +13,7 @@ if($_GET['action']=='del' && $_GET['rid'])
 {
 	$id=intval($_GET['rid']);
 	$query=mysqli_query($con,"delete from  tbladmin  where id='$id' && userType=0");
-echo "<script>alert('Sub-admin details deleted.');</script>";
+echo "<script>alert('Xóa Cộng Tác Viên');</script>";
 echo "<script type='text/javascript'> document.location = 'manage-subadmins.php'; </script>";
 }
 

@@ -19,7 +19,7 @@ $_SESSION['login']=$_POST['username'];
 $_SESSION['utype']=$num['userType'];
     echo "<script type='text/javascript'> document.location = 'dashboard.php'; </script>";
   }else{
-echo "<script>alert('Invalid Details');</script>";
+echo "<script>alert('Sai Thông Tin');</script>";
   }
  
 }
@@ -31,7 +31,7 @@ echo "<script>alert('Invalid Details');</script>";
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta name="description" content="News Portal.">
-        <meta name="author" content="PHPGurukul">
+        
 
 
         <!-- App title -->

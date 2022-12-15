@@ -16,10 +16,10 @@ $password=md5($_POST['pwd']);
 $usertype='0';
 $query=mysqli_query($con,"insert into tbladmin(AdminUserName,AdminEmailId,AdminPassword,userType ) values('$username','$email','$password','$usertype')");
 if($query){
-echo "<script>alert('Sub-admin details added successfully.');</script>";
+echo "<script>alert('Thêm Cộng Tác Viên');</script>";
 echo "<script type='text/javascript'> document.location = 'add-subadmins; </script>";
 } else {
-echo "<script>alert('Something went wrong. Please try again.');</script>";
+echo "<script>alert('Đã có lỗi vui lòng thử lại');</script>";
 }
 }
 

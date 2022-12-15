@@ -21,10 +21,10 @@ $postid=intval($_GET['pid']);
 $query=mysqli_query($con,"update tblposts set PostTitle='$posttitle',CategoryId='$catid',SubCategoryId='$subcatid',PostDetails='$postdetails',PostUrl='$url',Is_Active='$status',lastUpdatedBy='$lastuptdby' where id='$postid'");
 if($query)
 {
-$msg="Post updated ";
+$msg="Cập nhật bài đăng";
 }
 else{
-$error="Something went wrong . Please try again.";    
+$error="Đã có lỗi vui lòng thử lại";    
 } 
 
 }

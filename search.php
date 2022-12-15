@@ -71,7 +71,7 @@ $query=mysqli_query($con,"select tblposts.id as pid,tblposts.PostTitle as postti
 $rowcount=mysqli_num_rows($query);
 if($rowcount==0)
 {
-echo "No record found";
+echo "Không Tìm Thấy";
 }
 else {
 while ($row=mysqli_fetch_array($query)) {

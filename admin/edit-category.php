@@ -15,10 +15,10 @@ $description=$_POST['description'];
 $query=mysqli_query($con,"Update  tblcategory set CategoryName='$category',Description='$description' where id='$catid'");
 if($query)
 {
-$msg="Category Updated successfully ";
+$msg="Cập nhật thể loại";
 }
 else{
-$error="Something went wrong . Please try again.";    
+$error="Đã có lỗi vui lòng thử lại";    
 } 
 }
 

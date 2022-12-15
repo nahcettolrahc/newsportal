@@ -16,10 +16,10 @@ $subcatdescription=$_POST['sucatdescription'];
 $query=mysqli_query($con,"update tblsubcategory set CategoryId='$categoryid',Subcategory='$subcatname',SubCatDescription='$subcatdescription' where SubCategoryId='$subcatid'");
 if($query)
 {
-$msg="Sub-Category created ";
+$msg="Tạo thể loại con";
 }
 else{
-$error="Something went wrong . Please try again.";    
+$error="Đã có lỗi vui lòng thử lại";    
 } 
 }
 

@@ -15,7 +15,7 @@ $password=md5($_POST['newpassword']);
       $query1=mysqli_query($con,"update tbladmin set AdminPassword='$password'  where  AdminEmailId='$email' && AdminUserName='$username' ");
        if($query1)
    {
-echo "<script>alert('Password successfully changed');</script>";
+echo "<script>alert('Đổi mật khẩu thành công');</script>";
 echo "<script type='text/javascript'> document.location = 'index.php'; </script>";
 
    }
@@ -23,7 +23,7 @@ echo "<script type='text/javascript'> document.location = 'index.php'; </script>
     }
     else{
     
-      echo "<script>alert('Invalid Details. Please try again.');</script>";
+      echo "<script>alert('Đã có lỗi vui lòng thử lại');</script>";
     }
   }
 
@@ -35,7 +35,7 @@ echo "<script type='text/javascript'> document.location = 'index.php'; </script>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta name="description" content="News Portal.">
-        <meta name="author" content="PHPGurukul">
+        
 
 
         <!-- App title -->

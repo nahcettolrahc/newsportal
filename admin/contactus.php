@@ -16,10 +16,10 @@ $pagedetails=$_POST['pagedescription'];
 $query=mysqli_query($con,"update tblpages set PageTitle='$pagetitle',Description='$pagedetails' where PageName='$pagetype' ");
 if($query)
 {
-$msg="About us  page successfully updated ";
+$msg="Cập nhật trang thông tin";
 }
 else{
-$error="Something went wrong . Please try again.";    
+$error="Đã có lỗi vui lòng thử lại";    
 } 
 
 }

@@ -18,7 +18,7 @@ $allowed_extensions = array(".jpg","jpeg",".png",".gif");
 // Validation for allowed extensions .in_array() function searches an array for a specific value.
 if(!in_array($extension,$allowed_extensions))
 {
-echo "<script>alert('Invalid format. Only jpg / jpeg/ png /gif format allowed');</script>";
+echo "<script>alert('Sai kiểu file.Chỉ cho phép jpg / jpeg/ png /gif ');</script>";
 }
 else
 {
@@ -33,10 +33,10 @@ $postid=intval($_GET['pid']);
 $query=mysqli_query($con,"update tblposts set PostImage='$imgnewfile' where id='$postid'");
 if($query)
 {
-$msg="Post Feature Image updated ";
+$msg="Cập nhật ảnh ";
 }
 else{
-$error="Something went wrong . Please try again.";    
+$error="Đã có lỗi vui lòng thử lại";    
 } 
 }
 }

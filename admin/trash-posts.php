@@ -14,10 +14,10 @@ $postid=intval($_GET['pid']);
 $query=mysqli_query($con,"update tblposts set Is_Active=1 where id='$postid'");
 if($query)
 {
-$msg="Post restored successfully ";
+$msg="Khôi Phục Bài Đăng ";
 }
 else{
-$error="Something went wrong . Please try again.";    
+$error="Đã có lỗi vui lòng thử lại";    
 } 
 }
 
@@ -27,7 +27,7 @@ if($_GET['presid'])
 {
     $id=intval($_GET['presid']);
     $query=mysqli_query($con,"delete from  tblposts  where id='$id'");
-    $delmsg="Post deleted forever";
+    $delmsg="Xóa Bài Đăng Vĩnh Viễn";
 }
 
 ?>
@@ -123,7 +123,7 @@ if($_GET['presid'])
 
 <?php if($delmsg){ ?>
 <div class="alert alert-danger" role="alert">
-<strong>Oh snap!</strong> <?php echo htmlentities($delmsg);?></div>
+<strong>Lỗi</strong> <?php echo htmlentities($delmsg);?></div>
 <?php } ?>
 
 
@@ -156,7 +156,7 @@ if($rowcount==0)
 ?>
 <tr>
 
-<td colspan="4" align="center"><h3 style="color:red">Không Thấy Trong CSDL</h3></td>
+<td colspan="4" align="center"><h3 style="color:red">Không Có Dữ Liệu Trong CSDL</h3></td>
 <tr>
 <?php 
 } else {

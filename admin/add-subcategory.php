@@ -16,10 +16,10 @@ $status=1;
 $query=mysqli_query($con,"insert into tblsubcategory(CategoryId,Subcategory,SubCatDescription,Is_Active) values('$categoryid','$subcatname','$subcatdescription','$status')");
 if($query)
 {
-$msg="Sub-Category created ";
+$msg="Tạo Thể Loại Con";
 }
 else{
-$error="Something went wrong . Please try again.";    
+$error="Đã có lỗi vui lòng thử lại";    
 } 
 }
 

@@ -16,10 +16,10 @@ $status=1;
 $query=mysqli_query($con,"insert into tblcategory(CategoryName,Description,Is_Active) values('$category','$description','$status')");
 if($query)
 {
-$msg="Category created ";
+$msg="Tạo Thể Loại ";
 }
 else{
-$error="Something went wrong . Please try again.";    
+$error="Đã có lỗi vui lòng thử lại";    
 } 
 }
 
